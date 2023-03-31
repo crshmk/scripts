@@ -8,7 +8,13 @@ backup-project project-name db-table
 ```
 
 ### init-project 
-> clone and open a new react project 
+> [clone](https://github.com/crshmk/webpack-react) and open a new react project 
+
+### pull 
+> rsync a remote folder to a local folder referencing `project-name.env`
+```bash
+pull project-name
+```
 
 ### remote 
 > open a repo in github, gitlab, or bitbucket with either protocol 
@@ -17,14 +23,19 @@ backup-project project-name db-table
 
 ## setup 
 ```bash 
-ln -s /Users/path/to/scripts/backup/backup-project/backup-project.sh /usr/local/bin/backup-project
-ln -s /Users/path/to/scripts/backup/backup-machine/backup-machine.sh /usr/local/bin/backup-machine
-ln -s /Users/path/to/scripts/init-project /usr/local/bin/init-project
-ln -s /Users/path/to/scripts/remote/index.js /usr/local/bin/remote
+SRC="/Users/path/to/scripts"
+SYMLINK="/usr/local/bin"
 
-mv /Users/path/to/scripts/backup/backup-project/mysql-cnf /Users/path/to/scripts/backup/backup-project/mysql.cnf 
-mv /Users/path/to/scripts/backup/backup-project/.env-example Users/path/to/scripts/backup/backup-project/.env 
-mv /Users/path/to/scripts/backup/backup-machine/backup-paths-example.txt /Users/path/to/scripts/backup/backup-machine/backup-paths.txt 
-mv /Users/path/to/scripts/backup/backup-machine/.env-example Users/path/to/scripts/backup/backup-machine/.env 
-mv /Users/path/to/scripts/.env-example /Users/path/to/scripts/.env 
+ln -s $SRC/backup/backup-project/backup-project.sh $SYMLINK/backup-project
+ln -s $SRC/backup/backup-machine/backup-machine.sh $SYMLINK/backup-machine
+ln -s $SRC/backup/pull/pull.sh $SYMLINK/pull
+ln -s $SRC/init-project $SYMLINK/init-project
+ln -s $SRC/remote/index.js $SYMLINK/remote
+
+mv $SRC/backup/backup-project/mysql-cnf $SRC/backup/backup-project/mysql.cnf 
+mv $SRC/backup/backup-project/env-example $SRC/backup/backup-project/.env 
+mv $SRC/backup/pull/env-example $SRC/backup/pull/.env 
+mv $SRC/backup/backup-machine/backup-paths-example.txt $SRC/backup/backup-machine/backup-paths.txt 
+mv $SRC/backup/backup-machine/env-example $SRC/backup/backup-machine/.env 
+mv $SRC/env-example $SRC/.env 
 ```

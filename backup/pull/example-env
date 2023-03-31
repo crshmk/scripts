@@ -1,0 +1,3 @@
+SOURCE=/home/user/
+DESTINATION=/Users/user/backup
+SSH=user@0.0.0.0
