@@ -6,8 +6,6 @@ BACKUP_PATH="/Volumes/$USB1/$BACKUPDIR"
 DATE=`date +%Y-%m-%d`
 IS_DISK_MOUNTED=false
 MYSQL_TABLE=$2
-NODE_MODULES_PATH="$PROJECT_PATH/node_modules"
-NODE_MODULES_TEMP="$TMPDIR/node_modules_temp_$PROJECT_NAME"
 PROJECT_NAME=$1
 PROJECT_PATH="$DEVDIR/$PROJECT_NAME"
 
@@ -33,11 +31,9 @@ if [ ! -d "$PROJECT_PATH" ]; then
   echo "error: projet $PROJECT_NAME does not exist at $PROJECT_PATH"
   exit 2
 fi
-mv $NODE_MODULES_PATH $NODE_MODULES_TEMP 
 
-rsync -av $PROJECT_PATH $BACKUP_PATH
+rsync -av $PROJECT_PATH $BACKUP_PATH --exclude node_modules
 
-mv $NODE_MODULES_TEMP $NODE_MODULES_PATH
 
 if [[ ! $MYSQL_TABLE == '' ]]; then 
   mysqldump --defaults-extra-file=mysql.cnf $MYSQL_TABLE > $BACKUP_PATH/$MYSQL_TABLE-$DATE.sql
