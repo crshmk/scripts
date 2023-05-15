@@ -1,0 +1,19 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "local workflow scripts",
+  "main": "logColors.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crshmk/scripts.git"
+  },
+  "author": "chris hammock",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crshmk/scripts/issues"
+  },
+  "homepage": "https://github.com/crshmk/scripts#readme",
+  "dependencies": {
+    "ramda": "^0.29.0"
+  }
+}

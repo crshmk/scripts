@@ -2,3 +2,4 @@
 *DS_Store
 backup/backup-machine/backup-paths.txt
 *.cnf
+node_modules
