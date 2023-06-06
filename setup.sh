@@ -1,5 +1,5 @@
 #!/bin/bash
-SRC="/Users/pt/dev/scripts"
+SRC="/Users/user/path_to/scripts"
 SYMLINK="/usr/local/bin"
 
 ln -s $SRC/backup/backup-project/backup-project.sh $SYMLINK/backup-project

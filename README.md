@@ -23,7 +23,7 @@ pull project-name
 
 ## Setup 
 
-edit `$SRC` and `$SYMLINK` paths in `setup.sh` 
+edit `$SRC`, `$SYMLINK`, etc. in `setup.sh` and update all `.env` files 
 ```bash
-setup
+./setup.sh
 ```
