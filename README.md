@@ -8,7 +8,7 @@ backup-project project-name db-table
 ```
 
 ### init-project 
-> [clone](https://github.com/crshmk/webpack-react) and open a new react project 
+> [clone](https://github.com/crshmk/react-ts) and open a new react project 
 
 ### pull 
 > rsync a remote folder to a local folder referencing `project-name.env`
