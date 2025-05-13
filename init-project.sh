@@ -14,7 +14,7 @@ fi
 
 echo "creating new react project $1"
 
-git clone git@github.com:crshmk/webpack-react.git ~/dev/$1
+git clone git@github.com:crshmk/react-ts.git ~/dev/$1
 
 cd ~/dev/$1
 
