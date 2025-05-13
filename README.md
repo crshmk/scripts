@@ -22,6 +22,12 @@ pull project-name
 ### remote 
 > open a repo in github, gitlab, or bitbucket with any protocol 
 
+### stashes 
+> list them 
+
+### unpushed 
+> list commits not pushed to remote
+
 ---
 
 ## Setup 

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+git stash list | while read -r stash; do
+  stash_name=$(echo "$stash" | awk -F: '{print $1}')
+  stash_msg=$(echo "$stash" | awk -F: '{print $2}' | sed 's/^ //')
+  echo -e "\033[1;32m$stash_name\033[0m: \033[1;34m$stash_msg\033[0m"
+done
+
