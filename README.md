@@ -16,8 +16,11 @@ backup-project project-name db-table
 pull project-name
 ```
 
+### latest-commits 
+> list latest commits for each local branch
+
 ### remote 
-> open a repo in github, gitlab, or bitbucket with either protocol 
+> open a repo in github, gitlab, or bitbucket with any protocol 
 
 ---
 

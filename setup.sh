@@ -7,6 +7,7 @@ ln -s $SRC/backup/backup-machine/backup-machine.sh $SYMLINK/backup-machine
 ln -s $SRC/backup/pull/pull.sh $SYMLINK/pull
 ln -s $SRC/init-project $SYMLINK/init-project
 ln -s $SRC/remote/index.js $SYMLINK/remote
+ln -s $SRC/latest-commits $SYMLINK/latest-commits 
 
 mv $SRC/backup/backup-project/mysql-cnf $SRC/backup/backup-project/mysql.cnf 
 mv $SRC/backup/backup-project/.env-example $SRC/backup/backup-project/.env 
